@@ -130,6 +130,47 @@
   }
   footer .quote{font-style:italic;font-size:1.25rem;color:var(--ink);max-width:560px;margin:0 auto 10px}
   footer .attr{font-family:'Spectral SC',serif;letter-spacing:.15em;font-size:.75rem;color:var(--gold)}
+
+  /* ---------- PDF VIEWER MODAL ---------- */
+  .viewer{
+    position:fixed;inset:0;z-index:50;display:none;
+    align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);
+    background:rgba(28,22,14,.72);backdrop-filter:blur(3px);
+    opacity:0;transition:opacity .25s ease;
+  }
+  .viewer.open{display:flex;opacity:1}
+  .viewer-panel{
+    display:flex;flex-direction:column;width:100%;max-width:1000px;height:100%;
+    background:var(--card-bg);border:1px solid rgba(184,137,43,.5);border-radius:14px;
+    box-shadow:0 24px 60px rgba(0,0,0,.5);overflow:hidden;
+    transform:translateY(14px) scale(.99);transition:transform .25s ease;
+  }
+  .viewer.open .viewer-panel{transform:none}
+  .viewer-bar{
+    display:flex;align-items:center;gap:16px;
+    padding:14px 18px;border-bottom:1px solid rgba(184,137,43,.35);
+    background:linear-gradient(var(--parchment),var(--parchment-deep));
+  }
+  .viewer-bar h3{
+    font-family:'Cinzel',serif;font-size:1.15rem;font-weight:700;color:var(--ink);
+    flex-grow:1;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .vbtn{
+    font-family:'Spectral SC',serif;letter-spacing:.08em;text-transform:uppercase;
+    font-size:.72rem;text-decoration:none;color:var(--ink);
+    border:1px solid rgba(184,137,43,.6);border-radius:8px;
+    padding:8px 13px;cursor:pointer;background:transparent;
+    transition:background .2s,color .2s;white-space:nowrap;
+  }
+  .vbtn:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+  .vbtn.close{border-radius:50%;width:38px;height:38px;padding:0;font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center}
+  .viewer-body{flex-grow:1;background:#3a332a}
+  .viewer-body iframe{width:100%;height:100%;border:0;display:block}
+  body.no-scroll{overflow:hidden}
+  @media (max-width:560px){
+    .viewer-bar h3{font-size:.95rem}
+    .vbtn.dl{display:none}
+  }
 </style>
 </head>
 <body>
@@ -169,7 +210,7 @@
   <div class="grid">
 
     <!-- SKUD -->
-    <a class="card skud" href="skud-pai-sho.pdf">
+    <a class="card skud" href="skud-pai-sho.pdf" data-title="Skud Pai Sho — Rules">
       <svg class="tile" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="50" cy="50" r="46" fill="#f6eed8" stroke="#b8892b" stroke-width="2.5"/>
         <path d="M50 24 C60 40 60 52 50 60 C40 52 40 40 50 24 Z" fill="none" stroke="#b8892b" stroke-width="2"/>
@@ -184,7 +225,7 @@
     </a>
 
     <!-- ADEVĂR -->
-    <a class="card adevar" href="adevar-pai-sho.pdf">
+    <a class="card adevar" href="adevar-pai-sho.pdf" data-title="Adevăr Pai Sho — Rules">
       <svg class="tile" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="50" cy="50" r="46" fill="#f6eed8" stroke="#b8892b" stroke-width="2.5"/>
         <path d="M50 22 C56 34 56 44 50 52 C44 44 44 34 50 22 Z" fill="none" stroke="#b8892b" stroke-width="2"/>
@@ -199,7 +240,7 @@
     </a>
 
     <!-- NICK -->
-    <a class="card nick" href="nick-pai-sho.pdf">
+    <a class="card nick" href="nick-pai-sho.pdf" data-title="Nick Pai Sho — Rules">
       <svg class="tile" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="50" cy="50" r="46" fill="#f6eed8" stroke="#b8892b" stroke-width="2.5"/>
         <rect x="34" y="34" width="32" height="32" rx="4" fill="none" stroke="#b8892b" stroke-width="2" transform="rotate(45 50 50)"/>
@@ -220,5 +261,59 @@
   </footer>
 
 </div>
+
+<!-- ---------- PDF VIEWER MODAL ---------- -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+  <div class="viewer-panel">
+    <div class="viewer-bar">
+      <h3 id="viewer-title">Rules</h3>
+      <a class="vbtn dl" id="viewer-download" href="#" download>Download</a>
+      <a class="vbtn dl" id="viewer-newtab" href="#" target="_blank" rel="noopener">New tab</a>
+      <button class="vbtn close" id="viewer-close" aria-label="Close viewer">&times;</button>
+    </div>
+    <div class="viewer-body">
+      <iframe id="viewer-frame" title="Rulebook viewer" src="about:blank"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var viewer   = document.getElementById('viewer');
+  var frame    = document.getElementById('viewer-frame');
+  var titleEl  = document.getElementById('viewer-title');
+  var dlBtn    = document.getElementById('viewer-download');
+  var tabBtn   = document.getElementById('viewer-newtab');
+  var closeBtn = document.getElementById('viewer-close');
+
+  function openViewer(pdf, title){
+    frame.src = pdf + '#view=FitH';
+    titleEl.textContent = title || 'Rules';
+    dlBtn.href = pdf;
+    tabBtn.href = pdf;
+    viewer.classList.add('open');
+    document.body.classList.add('no-scroll');
+  }
+  function closeViewer(){
+    viewer.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    // release the PDF after the fade-out
+    setTimeout(function(){ frame.src = 'about:blank'; }, 260);
+  }
+
+  document.querySelectorAll('a.card').forEach(function(card){
+    card.addEventListener('click', function(e){
+      e.preventDefault();
+      openViewer(card.getAttribute('href'), card.getAttribute('data-title'));
+    });
+  });
+
+  closeBtn.addEventListener('click', closeViewer);
+  viewer.addEventListener('click', function(e){ if(e.target === viewer) closeViewer(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && viewer.classList.contains('open')) closeViewer();
+  });
+})();
+</script>
 </body>
 </html>
