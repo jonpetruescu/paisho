@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nick Pai Sho — Rules · The Pai Sho Archive</title>
+<meta name="description" content="Full rules for Nick Pai Sho: a chess-like game where captures follow the Avatar cycle and you race your White Lotus to the center.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Spectral+SC:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/rules.css">
+</head>
+<body class="game-nick">
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="back" href="index.html"><span class="a">&larr;</span> The Pai&nbsp;Sho Archive</a>
+    <a class="dl-btn" href="nick-pai-sho.pdf" target="_blank" rel="noopener">Original PDF</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <img class="lotus" src="lotus.png" alt="White Lotus tile" width="96" height="96">
+    <div class="eyebrow">A Fan Tradition</div>
+    <h1>Nick Pai Sho</h1>
+    <p class="tagline">Walk your White Lotus to the center — or checkmate your rival — while every capture follows the Avatar cycle.</p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- OBJECTIVE -->
+  <section class="section">
+    <h2>Objective</h2>
+    <p>Move your <strong>White Lotus</strong> to the center of the board, or <strong>checkmate</strong> your opponent, to win.</p>
+  </section>
+
+  <!-- SETUP -->
+  <section class="section">
+    <h2>Setup</h2>
+    <p>Set up the board as shown, each player's pieces arranged in an arc around their own edge, White Lotus at the point.</p>
+    <figure>
+      <img src="assets/nick-board.png" alt="Nick Pai Sho starting setup: each player's element tiles arranged in an arc, with the White Lotus and Avatar in position.">
+      <figcaption>The starting position.</figcaption>
+    </figure>
+  </section>
+
+  <!-- COMPONENTS -->
+  <section class="section">
+    <h2>Components</h2>
+    <p>Each player commands the four elements — <strong>three each</strong> of Air, Water, Earth and Fire — plus a single Avatar and a single White Lotus.</p>
+    <figure>
+      <img src="assets/nick-components.png" alt="Each player's pieces: three each of Air, Water, Earth and Fire, one Avatar, and one White Lotus.">
+      <figcaption>Air · Water · Earth · Fire (×3 each), plus the Avatar and the White Lotus.</figcaption>
+    </figure>
+  </section>
+
+  <!-- MOVEMENT -->
+  <section class="section">
+    <div class="split has-figure figure-left">
+      <div class="fig-cell">
+        <figure>
+          <img src="assets/nick-moveex.png" alt="Movement examples: a tile steps to an adjacent point, or chains jumps over friendly tiles.">
+          <figcaption>Step to a neighbor — or chain jumps over friendly tiles.</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Movement</h2>
+        <p>Every tile can move to any empty point surrounding it. Non-Lotus tiles can also <strong>jump over friendly tiles</strong>.</p>
+        <p>You can chain several jumps together, but you may only do <strong>one type</strong> of movement per turn — either a single step or a chain of jumps, not both.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPTURING -->
+  <section class="section">
+    <div class="split has-figure">
+      <div>
+        <h2>Capturing</h2>
+        <p>Capturing follows the <strong>Avatar cycle</strong>. To capture an enemy piece, move your piece next to theirs and remove theirs from the game.</p>
+        <p>Your own piece will be captured if you move it next to an enemy tile that can capture it. If it lands next to both a capturable enemy <em>and</em> an enemy that can capture it, both captures take place.</p>
+      </div>
+      <div class="fig-cell">
+        <figure>
+          <img src="assets/nick-cycle.png" alt="The Avatar cycle showing which element captures which.">
+          <figcaption>Each element captures the next around the Avatar cycle.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <figure style="margin-top:16px">
+      <img src="assets/nick-capex.png" alt="Two capture examples: an element capturing an adjacent enemy, and a case where a move is not allowed.">
+      <figcaption>Left: a valid capture. Right: moving beside a stronger enemy loses your piece.</figcaption>
+    </figure>
+    <h3>The Avatar</h3>
+    <p>The Avatar can capture any tile and can be captured by any tile. After yours has been captured, if you then capture your opponent's Avatar, yours respawns in its starting location — move any tile currently in that spot to a surrounding empty point.</p>
+  </section>
+
+  <!-- WHITE LOTUS -->
+  <section class="section">
+    <h2>The White Lotus</h2>
+    <p>Your White Lotus is your <strong>King</strong>. It cannot capture, and instead of being captured it is put in <strong>check</strong> — you must remove it from check on your turn, or it's checkmate.</p>
+    <p>You may not move your Lotus into check, even for a winning move — including moving it adjacent to the enemy Lotus.</p>
+    <p>If no player can move their Lotus to the center, the game ends in a <strong>stalemate</strong>.</p>
+  </section>
+
+  <footer>
+    <p class="quote">“Walk the White Lotus home, and the garden is yours.”</p>
+    <p class="src">Nick Pai Sho is a fan-made tradition. Download the original rules sheet with the <em>Original PDF</em> link above.</p>
+    <p class="attr">— The Order of the White Lotus</p>
+  </footer>
+
+</div>
+</body>
+</html>

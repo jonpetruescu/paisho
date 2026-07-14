@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skud Pai Sho — Rules · The Pai Sho Archive</title>
+<meta name="description" content="Full rules for Skud Pai Sho: link your flower tiles into harmonies and close a ring around the center of the board to win.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Spectral+SC:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/rules.css">
+</head>
+<body class="game-skud">
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="back" href="index.html"><span class="a">&larr;</span> The Pai&nbsp;Sho Archive</a>
+    <a class="dl-btn" href="skud-pai-sho.pdf" target="_blank" rel="noopener">Original PDF</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <img class="lotus" src="lotus.png" alt="White Lotus tile" width="96" height="96">
+    <div class="eyebrow">A Fan Tradition · The Garden Gate</div>
+    <h1>Skud Pai Sho</h1>
+    <p class="tagline">Link your flower tiles into harmonies and race to close a ring around the center of the board.</p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- OBJECTIVE -->
+  <section class="section">
+    <div class="split has-figure">
+      <div>
+        <h2>Objective</h2>
+        <p>Be the first player to use your flowers to create a <strong>Harmony Ring</strong> — a closed loop of harmonies that surrounds the center of the board.</p>
+        <p>Every turn is a choice between growing your garden and arranging the flowers already in bloom, always with an eye toward completing that ring before your opponent completes theirs.</p>
+      </div>
+      <div class="fig-cell">
+        <figure>
+          <img src="assets/skud-board.png" alt="The Skud Pai Sho board: a circle divided into White, Red and Neutral Gardens, with four Gates around the edge.">
+          <figcaption>The board — White, Red &amp; Neutral Gardens, with a Gate at each edge.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAYING A TURN -->
+  <section class="section">
+    <h2>Playing a Turn</h2>
+    <p>On your turn you take exactly one of two actions:</p>
+    <ul>
+      <li><strong>Arrange</strong> — move a Flower Tile already on the board.</li>
+      <li><strong>Plant</strong> — place a new Basic Flower Tile on an open Gate.</li>
+    </ul>
+    <p>If you form a <strong>new Harmony</strong> between any of your tiles when you Arrange, you earn a <strong>Harmony Bonus</strong> and may immediately do one of the following:</p>
+    <ul>
+      <li>Place an Accent Tile on the board.</li>
+      <li>Plant a Special Flower Tile.</li>
+      <li>If you have no Growing Flowers, plant a Basic Flower Tile.</li>
+    </ul>
+  </section>
+
+  <!-- HARMONIES -->
+  <section class="section">
+    <div class="split has-figure figure-left">
+      <div class="fig-cell">
+        <figure>
+          <img src="assets/skud-hex.png" alt="Harmony and clash relationships between the six basic flowers, shown as a hexagon with green harmony edges and red clashing lines.">
+          <figcaption>Which flowers harmonize (green) and which clash (red).</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Harmonies &amp; Clashes</h2>
+        <p>A <strong>Harmony</strong> is created when two of a player's harmonious Flower Tiles sit on the same line with no other tiles or Gates between them, and neither tile is on a Gate.</p>
+        <p>A <strong>Clash</strong> is when two clashing Flower Tiles — belonging to either player — would line up the same way. Tiles on the board are <em>never</em> allowed to Clash, so you cannot make a move that would result in any Clash.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BOARD -->
+  <section class="section">
+    <h2>The Board</h2>
+    <p>Tiles are played on the <strong>intersections</strong> of the board.</p>
+    <h3>Gates</h3>
+    <p>There are four Gates. Flower Tiles are placed here when first played onto the board. Tiles already on the board can never be moved onto a Gate.</p>
+    <h3>Gardens</h3>
+    <p>The differently colored areas affect where Basic Flower Tiles can move (see <em>Basic Flower Tiles</em>). The border points between Gardens are considered Neutral, and any Basic Flower can be moved there.</p>
+    <h3>Blooming &amp; Growing</h3>
+    <p>Flower Tiles are called <strong>Growing</strong> while they sit in a Gate, and <strong>Blooming</strong> once they are anywhere else on the board.</p>
+  </section>
+
+  <!-- BASIC FLOWER TILES -->
+  <section class="section">
+    <h2>Basic Flower Tiles</h2>
+    <p>Players have <strong>three of each</strong> Basic Flower Tile. They…</p>
+    <ul>
+      <li>Move through empty spaces up to as many spaces as the number in their name.</li>
+      <li>Form Harmony with the tiles adjacent to them in the flower circle.</li>
+      <li>Clash with opposite-colored, same-numbered tiles.</li>
+      <li>Capture Clashing tiles by landing on them, removing the captured tile from the game.</li>
+      <li>Cannot end their turn completely inside an opposite-colored Garden.</li>
+    </ul>
+    <div class="tiles">
+      <div class="tile-card"><img src="assets/skud-white-jade.png" alt="White Jade tile"><div><div class="tname">White Jade</div><div class="tstat">White · Move 5</div></div></div>
+      <div class="tile-card"><img src="assets/skud-lily.png" alt="Lily tile"><div><div class="tname">Lily</div><div class="tstat">White · Move 4</div></div></div>
+      <div class="tile-card"><img src="assets/skud-jasmine.png" alt="Jasmine tile"><div><div class="tname">Jasmine</div><div class="tstat">White · Move 3</div></div></div>
+      <div class="tile-card"><img src="assets/skud-rose.png" alt="Rose tile"><div><div class="tname">Rose</div><div class="tstat">Red · Move 3</div></div></div>
+      <div class="tile-card"><img src="assets/skud-chrysanthemum.png" alt="Chrysanthemum tile"><div><div class="tname">Chrysanthemum</div><div class="tstat">Red · Move 4</div></div></div>
+      <div class="tile-card"><img src="assets/skud-rhododendron.png" alt="Rhododendron tile"><div><div class="tname">Rhododendron</div><div class="tstat">Red · Move 5</div></div></div>
+    </div>
+  </section>
+
+  <!-- ACCENT TILES -->
+  <section class="section">
+    <h2>Accent Tiles</h2>
+    <p>Players choose <strong>four</strong> Accent Tiles to use during the game. Accent Tiles cannot:</p>
+    <ul>
+      <li>Be played on a Gate.</li>
+      <li>Be played in a way that moves a Basic Flower Tile into an opposite-colored Garden.</li>
+      <li>Cause tiles to Clash.</li>
+      <li>Move a tile onto or off of a Gate or the board.</li>
+    </ul>
+    <div class="tiles">
+      <div class="tile-card"><img src="assets/skud-rock.png" alt="Rock accent tile"><div><div class="tname">Rock</div><div class="tstat">Open intersection</div><div class="tdesc">Cancels Harmonies on the horizontal and vertical lines it lies on, and cannot be moved by a Wheel.</div></div></div>
+      <div class="tile-card"><img src="assets/skud-wheel.png" alt="Wheel accent tile"><div><div class="tname">Wheel</div><div class="tstat">Open intersection</div><div class="tdesc">Rotates all surrounding tiles one space clockwise.</div></div></div>
+      <div class="tile-card"><img src="assets/skud-knotweed.png" alt="Knotweed accent tile"><div><div class="tname">Knotweed</div><div class="tstat">Open intersection</div><div class="tdesc">Cancels Harmonies formed by the surrounding tiles.</div></div></div>
+      <div class="tile-card"><img src="assets/skud-boat.png" alt="Boat accent tile"><div><div class="tname">Boat</div><div class="tstat">Played on a tile</div><div class="tdesc">Moves a Flower Tile to a surrounding space and takes its place, or removes an Accent Tile from the board. Remove the Accent and Boat tiles from the game.</div></div></div>
+    </div>
+  </section>
+
+  <!-- SPECIAL FLOWERS -->
+  <section class="section">
+    <h2>Special Flowers</h2>
+    <p>Players have <strong>one of each</strong> Special Flower Tile.</p>
+    <div class="tiles">
+      <div class="tile-card"><img src="assets/skud-lotus.png" alt="White Lotus tile"><div><div class="tname">White Lotus</div><div class="tstat">Move 2</div><div class="tdesc">Forms Harmony with all Basic Flower Tiles of either player. The Harmony belongs to the player who owns the Basic Flower Tile.</div></div></div>
+      <div class="tile-card"><img src="assets/skud-orchid.png" alt="Orchid tile"><div><div class="tname">Orchid</div><div class="tstat">Move 6</div><div class="tdesc">Traps the opponent's surrounding Flower Tiles so they cannot be moved except by an Accent Tile. If you have a Blooming White Lotus, your Orchid can be captured by any Flower Tile and can capture any Flower Tile.</div></div></div>
+    </div>
+  </section>
+
+  <!-- SETUP -->
+  <section class="section">
+    <h2>Game Setup</h2>
+    <p>Before the first move:</p>
+    <ul>
+      <li>Players each choose four Accent Tiles to play with, starting with the Host (the second player).</li>
+      <li>The Guest (the first player) chooses a Basic Flower Tile. Each player starts with one of these tiles in opposite Gates.</li>
+    </ul>
+  </section>
+
+  <!-- ENDING -->
+  <section class="section">
+    <h2>Ending the Game</h2>
+    <p>The game ends when a player forms their Harmony Ring and wins.</p>
+    <p>The game also ends when a player plays their <strong>last</strong> Basic Flower Tile. When this happens, the player with the most midline-crossing Harmonies on the board wins.</p>
+  </section>
+
+  <footer>
+    <p class="quote">“In the game of Pai Sho, some pieces move for many turns before their purpose is revealed.”</p>
+    <p class="src">Skud Pai Sho is a fan-made tradition. Play online, join the community, and read the full comprehensive rules at <a href="https://skudpaisho.com" target="_blank" rel="noopener">The Garden Gate — SkudPaiSho.com</a>.</p>
+    <p class="attr">— The Order of the White Lotus</p>
+  </footer>
+
+</div>
+</body>
+</html>

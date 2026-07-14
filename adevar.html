@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adevăr Pai Sho — Rules · The Pai Sho Archive</title>
+<meta name="description" content="Full rules for Adevăr Pai Sho: a game of hidden objectives and deduction. Win by completing your secret goal or unmasking your opponent's.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Spectral+SC:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/rules.css">
+</head>
+<body class="game-adevar">
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="back" href="index.html"><span class="a">&larr;</span> The Pai&nbsp;Sho Archive</a>
+    <a class="dl-btn" href="adevar-pai-sho.pdf" target="_blank" rel="noopener">Original PDF</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <img class="lotus" src="lotus.png" alt="White Lotus tile" width="96" height="96">
+    <div class="eyebrow">A Fan Tradition · Version 4.0.2</div>
+    <h1>Adevăr Pai Sho</h1>
+    <p class="tagline">A game of hidden objectives and deduction — win by completing your secret goal, or by unmasking your opponent's.</p>
+    <div class="divider"></div>
+  </header>
+
+  <!-- HOW TO PLAY -->
+  <section class="section">
+    <h2>How to Play</h2>
+    <p>Before the game starts, each player chooses their win condition by selecting a <strong>Hidden Tile</strong> and placing it facedown on the board, as shown in the setup.</p>
+    <h3>Objective</h3>
+    <p>Complete your own secret objective, or discover and capture your opponent's secret objective.</p>
+    <h3>Taking a Turn</h3>
+    <p>Starting with the Host, players can either move a tile or deploy a new tile.</p>
+    <h3>Capturing</h3>
+    <p>To capture, move or deploy one of your tiles onto a tile it is allowed to capture. If that tile is a Basic Tile, it is removed from the game.</p>
+    <h3>Movement</h3>
+    <p>Tiles are played in the spaces and can move to adjacent empty spaces, up to their maximum movement.</p>
+  </section>
+
+  <!-- SETUP -->
+  <section class="section">
+    <h2>Setting Up the Board</h2>
+    <p>Players set up the board as shown, with their Hidden Tiles placed <strong>facedown</strong> to the sides. Each player has a Home Plot — the Guest at the top, the Host at the bottom.</p>
+    <figure>
+      <img src="assets/adevar-board.png" alt="Adevăr Pai Sho starting setup: tiles arranged along each player's Home Plot, with Hidden Tiles facedown on the left and right.">
+      <figcaption>Starting position, with each player's Hidden Tile facedown at the sides.</figcaption>
+    </figure>
+  </section>
+
+  <!-- BASIC TILES -->
+  <section class="section">
+    <h2>Basic Tiles</h2>
+    <p>Each player commands a garden of Basic Tiles in three types. Their movement range and capture relationships are shown below.</p>
+    <figure>
+      <img src="assets/adevar-basic.png" alt="Adevăr basic tiles: Lilac (x10, Move 3), Zinnia (x8, Move 4) and Foxglove (x5, Move 5), with their capture relationships.">
+      <figcaption>Lilac ×10 · Zinnia ×8 · Foxglove ×5 — each captures certain non-identical Basic Tiles.</figcaption>
+    </figure>
+    <div class="tip"><b>Tip</b> Basic Tiles capture non-identical Basic Tiles.</div>
+  </section>
+
+  <!-- THE BOARD / PLOTS -->
+  <section class="section">
+    <h2>The Board &amp; Plots</h2>
+    <p>The board is divided into <strong>Plots</strong>, and each Plot limits how many Basic Tiles it can hold per person:</p>
+    <ul>
+      <li><strong>Red Plots</strong> — limit 2.</li>
+      <li><strong>White Plots</strong> — limit 3.</li>
+      <li><strong>Open Plots</strong> — no limit.</li>
+    </ul>
+    <p>If a Basic Tile sits in two Plots at once, it counts as half in each. Special Tiles never count toward Plot limits.</p>
+    <p>A Basic Tile only counts toward a limit if it <em>ends its movement</em> inside the Plot — so tiles may travel through a full Plot as long as they don't stop inside it.</p>
+  </section>
+
+  <!-- SPECIAL TILES -->
+  <section class="section">
+    <h2>Special Tiles</h2>
+    <p>Special Tiles are returned to their owner's hand when captured, rather than removed from the game.</p>
+    <h3>Gate ×2</h3>
+    <p>Can be placed adjacent to a Basic Tile you own. New tiles may only be deployed adjacent to your Gate. The Gate that starts on the board is your <strong>Home Gate</strong>; the one in your hand is your <strong>Away Gate</strong>.</p>
+    <h3>Vanguard ×2</h3>
+    <p>Both Vanguards must be captured before the Hidden Tile they guard can be captured. They regrow if either: the attacking Second Face attempts to capture the Hidden Tile and fails, or you capture the opponent's Second Face tile.</p>
+    <h3>Reflection ×1 &nbsp;<span style="font-family:'Spectral SC',serif;font-size:.7rem;letter-spacing:.06em;color:var(--gold)">MOVE 5</span></h3>
+    <p>When your Reflection is captured, you must flip over your Hidden Tile. The Reflection can only be deployed through your Home Gate.</p>
+  </section>
+
+  <!-- HIDDEN TILES -->
+  <section class="section">
+    <h2>Hidden Tiles — Secret Objectives</h2>
+    <p>Your Hidden Tile is the secret win condition you chose at setup. Complete it and declare to win. The seven objectives are:</p>
+    <div class="obj"><div class="oname">Iris</div><div class="odesc">Have at least 2 Basic Tiles in each colored Plot.</div></div>
+    <div class="obj"><div class="oname">White Rose</div><div class="odesc">Deploy your Away Gate so it touches your opponent's Home Plot.</div></div>
+    <div class="obj"><div class="oname">Oriental Lily</div><div class="odesc">Create one of the Garden patterns (shown at right) using your Basic Tiles.</div></div>
+    <figure style="max-width:340px;margin:6px 0 14px">
+      <img src="assets/adevar-lily.png" alt="One of the Garden dot-patterns the Oriental Lily objective must reproduce with Basic Tiles.">
+      <figcaption>An Oriental Lily Garden pattern.</figcaption>
+    </figure>
+    <div class="obj"><div class="oname">Bird of Paradise</div><div class="odesc">Have at least one Basic Tile in every Plot.</div></div>
+    <div class="obj"><div class="oname">White Lotus</div><div class="odesc">Create a closed ring of harmonies around the board center using Basic Tiles and diagonal line of sight. Basic Tiles harmonize with non-identical Basic Tiles.</div></div>
+    <div class="obj"><div class="oname">Echeveria</div><div class="odesc">Capture 2 of each of your opponent's Basic Tile types, and have 1 of each of yours captured by the opponent.</div></div>
+    <div class="obj"><div class="oname">Black Orchid</div><div class="odesc">Have more than or the same number of Basic Tiles as your opponent in every non-Home Plot, with at least half a tile in each of those Plots.</div></div>
+  </section>
+
+  <!-- SECOND FACE -->
+  <section class="section">
+    <h2>Second Face Tiles</h2>
+    <p>If you deduce which Hidden Tile your opponent chose, you can deploy the matching <strong>Second Face</strong> tile (Move 7) to capture their Hidden Tile and win the game.</p>
+    <ul>
+      <li>You may only play two <em>different</em> Second Face tiles in a single game.</li>
+      <li>You may only have one Second Face tile in play at a time. Deploy another while one is in play, and the old one returns to your hand.</li>
+      <li>If you reveal your opponent's Hidden Tile and already have an incorrect Second Face tile on the board, remove that tile from the game.</li>
+    </ul>
+    <div class="tip"><b>Tip</b> A Second Face tile can only capture the Hidden Tile it looks like.</div>
+  </section>
+
+  <!-- WINNING -->
+  <section class="section">
+    <h2>Winning</h2>
+    <p>To win, you must complete your objective or capture your opponent's Hidden Tile.</p>
+    <p>When you attempt to capture a Hidden Tile, first <strong>declare</strong> that you are doing so. Your opponent then states whether that Second Face tile is able to capture their Hidden Tile. If it can, you win. If it can't, remove the Second Face tile from the game and regrow the Vanguard tiles surrounding that Hidden Tile.</p>
+    <p>A <strong>draw</strong> occurs when all players are unable to complete any of their win conditions.</p>
+  </section>
+
+  <footer>
+    <p class="quote">“Complete your objective — or discover your opponent's.”</p>
+    <p class="src">Adevăr Pai Sho is a fan-made deduction game (rules version 4.0.2). Download the original rules sheet with the <em>Original PDF</em> link above.</p>
+    <p class="attr">— The Order of the White Lotus</p>
+  </footer>
+
+</div>
+</body>
+</html>
